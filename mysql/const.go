@@ -18,7 +18,7 @@ import (
 	"strings"
 
 	"github.com/pingcap/errors"
-	"github.com/vitthalaa/parser/format"
+	"github.com/pingcap/parser/format"
 )
 
 func newInvalidModeErr(s string) error {

@@ -14,7 +14,7 @@
 package ast
 
 import (
-	"github.com/vitthalaa/parser/format"
+	"github.com/pingcap/parser/format"
 )
 
 var _ StmtNode = &IndexAdviseStmt{}

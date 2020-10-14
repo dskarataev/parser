@@ -21,9 +21,9 @@ import (
 	"unicode"
 
 	"github.com/pingcap/errors"
-	"github.com/vitthalaa/parser/ast"
-	"github.com/vitthalaa/parser/mysql"
-	"github.com/vitthalaa/parser/terror"
+	"github.com/pingcap/parser/ast"
+	"github.com/pingcap/parser/mysql"
+	"github.com/pingcap/parser/terror"
 )
 
 var (
@@ -90,7 +90,7 @@ func New() *Parser {
 		ast.NewParamMarkerExpr == nil ||
 		ast.NewHexLiteral == nil ||
 		ast.NewBitLiteral == nil {
-		panic("no parser driver (forgotten import?) https://github.com/vitthalaa/parser/issues/43")
+		panic("no parser driver (forgotten import?) https://github.com/pingcap/parser/issues/43")
 	}
 
 	return &Parser{

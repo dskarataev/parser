@@ -20,9 +20,9 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/vitthalaa/parser/ast"
-	"github.com/vitthalaa/parser/format"
-	"github.com/vitthalaa/parser/mysql"
+	"github.com/pingcap/parser/ast"
+	"github.com/pingcap/parser/format"
+	"github.com/pingcap/parser/mysql"
 )
 
 func init() {

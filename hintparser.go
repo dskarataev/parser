@@ -21,8 +21,8 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/vitthalaa/parser/ast"
-	"github.com/vitthalaa/parser/model"
+	"github.com/pingcap/parser/ast"
+	"github.com/pingcap/parser/model"
 )
 
 type yyhintSymType struct {

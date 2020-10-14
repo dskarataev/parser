@@ -20,8 +20,8 @@ import (
 	"time"
 
 	. "github.com/pingcap/check"
-	"github.com/vitthalaa/parser/mysql"
-	"github.com/vitthalaa/parser/types"
+	"github.com/pingcap/parser/mysql"
+	"github.com/pingcap/parser/types"
 )
 
 func TestT(t *testing.T) {
