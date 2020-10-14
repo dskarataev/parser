@@ -4803,23 +4803,36 @@ LikeEscapeOpt:
 Field:
 	'*'
 	{
-		$$ = &ast.SelectField{WildCard: &ast.WildCardField{}}
+		$$ = &ast.SelectField{
+			WildCard: &ast.WildCardField{},
+			Offset:   parser.startOffset(&yyS[yypt]),
+		}
 	}
 |	Identifier '.' '*'
 	{
 		wildCard := &ast.WildCardField{Table: model.NewCIStr($1)}
-		$$ = &ast.SelectField{WildCard: wildCard}
+		$$ = &ast.SelectField{
+			WildCard: wildCard,
+			Offset:   parser.startOffset(&yyS[yypt]),
+		}
 	}
 |	Identifier '.' Identifier '.' '*'
 	{
 		wildCard := &ast.WildCardField{Schema: model.NewCIStr($1), Table: model.NewCIStr($3)}
-		$$ = &ast.SelectField{WildCard: wildCard}
+		$$ = &ast.SelectField{
+			WildCard: wildCard,
+			Offset:   parser.startOffset(&yyS[yypt]),
+		}
 	}
 |	Expression FieldAsNameOpt
 	{
 		expr := $1
 		asName := $2
-		$$ = &ast.SelectField{Expr: expr, AsName: model.NewCIStr(asName)}
+		$$ = &ast.SelectField{
+			Expr:   expr,
+			AsName: model.NewCIStr(asName),
+			Offset: parser.startOffset(&yyS[yypt]),
+		}
 	}
 |	'{' Identifier Expression '}' FieldAsNameOpt
 	{
@@ -4829,7 +4842,11 @@ Field:
 		 */
 		expr := $3
 		asName := $5
-		$$ = &ast.SelectField{Expr: expr, AsName: model.NewCIStr(asName)}
+		$$ = &ast.SelectField{
+			Expr:   expr,
+			AsName: model.NewCIStr(asName),
+			Offset: parser.startOffset(&yyS[yypt]),
+		}
 	}
 
 FieldAsNameOpt:
@@ -6633,6 +6650,7 @@ FunctionCallGeneric:
 	}
 |	Identifier '.' Identifier '(' ExpressionListOpt ')'
 	{
+		offset := parser.startOffset(&yyS[yypt-5])
 		var tp ast.FuncCallExprType
 		if isInTokenMap($3) {
 			tp = ast.FuncCallExprTypeKeyword
@@ -6640,6 +6658,7 @@ FunctionCallGeneric:
 			tp = ast.FuncCallExprTypeGeneric
 		}
 		$$ = &ast.FuncCallExpr{
+			Offset: offset,
 			Tp:     tp,
 			Schema: model.NewCIStr($1),
 			FnName: model.NewCIStr($3),
