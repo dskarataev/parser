@@ -18,7 +18,7 @@ import (
 	"unicode"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/parser/mysql"
+	"github.com/vitthalaa/parser/mysql"
 )
 
 var _ = Suite(&testLexerSuite{})

@@ -17,8 +17,8 @@ import (
 	"strings"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/parser/mysql"
-	"github.com/pingcap/parser/terror"
+	"github.com/vitthalaa/parser/mysql"
+	"github.com/vitthalaa/parser/terror"
 )
 
 var (
