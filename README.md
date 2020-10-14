@@ -1,5 +1,3 @@
-forked from [kyleconroy/parser](https://github.com/kyleconroy/parser)
-
 # Parser - A MySQL Compatible SQL Parser
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/pingcap/parser)](https://goreportcard.com/report/github.com/pingcap/parser)

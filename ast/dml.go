@@ -15,10 +15,10 @@ package ast
 
 import (
 	"github.com/pingcap/errors"
-	"github.com/vitthalaa/parser/auth"
-	"github.com/vitthalaa/parser/format"
-	"github.com/vitthalaa/parser/model"
-	"github.com/vitthalaa/parser/mysql"
+	"github.com/pingcap/parser/auth"
+	"github.com/pingcap/parser/format"
+	"github.com/pingcap/parser/model"
+	"github.com/pingcap/parser/mysql"
 )
 
 var (

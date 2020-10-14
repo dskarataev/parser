@@ -21,7 +21,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/vitthalaa/parser/mysql"
+	"github.com/pingcap/parser/mysql"
 )
 
 var _ = yyLexer(&Scanner{})

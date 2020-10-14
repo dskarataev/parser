@@ -17,8 +17,8 @@ import (
 	"testing"
 
 	. "github.com/pingcap/check"
-	"github.com/vitthalaa/parser"
-	"github.com/vitthalaa/parser/ast"
+	"github.com/pingcap/parser"
+	"github.com/pingcap/parser/ast"
 )
 
 func TestT(t *testing.T) {

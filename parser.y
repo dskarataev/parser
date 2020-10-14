@@ -28,13 +28,13 @@ package parser
 import (
 	"strings"
 
-	"github.com/vitthalaa/parser/mysql"
-	"github.com/vitthalaa/parser/ast"
-	"github.com/vitthalaa/parser/model"
-	"github.com/vitthalaa/parser/opcode"
-	"github.com/vitthalaa/parser/auth"
-	"github.com/vitthalaa/parser/charset"
-	"github.com/vitthalaa/parser/types"
+	"github.com/pingcap/parser/mysql"
+	"github.com/pingcap/parser/ast"
+	"github.com/pingcap/parser/model"
+	"github.com/pingcap/parser/opcode"
+	"github.com/pingcap/parser/auth"
+	"github.com/pingcap/parser/charset"
+	"github.com/pingcap/parser/types"
 )
 
 %}
